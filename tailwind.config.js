@@ -13,7 +13,10 @@ export default {
       },
       colors: {
         primary: '#9538E2'
-      }
+      },
+      backgroundImage: {
+        banner: "url('/src/assets/img/banner.jpg')"
+     }
     },
   },
   plugins: [

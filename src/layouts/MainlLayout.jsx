@@ -7,8 +7,9 @@ const MainlLayout = () => {
         <div>
             {/* navbar */}
             <Navber></Navber>
-            {/* banner */}
+            {/* dynamic */}
             <Outlet></Outlet>
+            {/* footer */}
         </div>
     );
 };
