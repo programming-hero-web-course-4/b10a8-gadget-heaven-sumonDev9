@@ -10,6 +10,9 @@ export default {
     extend: {
       fontFamily: {
         sora: 'Sora',
+      },
+      colors: {
+        primary: '#9538E2'
       }
     },
   },
