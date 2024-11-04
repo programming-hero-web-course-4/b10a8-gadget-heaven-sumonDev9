@@ -1,0 +1,221 @@
+[
+    {
+        "product_id": 1,
+        "product_title": "Asus ROG Zephyrus G14",
+        "product_image": "https://i.ibb.co/NKBMWzD/rog-zephyrus.webp",
+        "category": "Computers",
+        "price": 1899,
+        "description": "Compact and powerful gaming laptop with incredible performance.",
+        "Specification": [
+            "14-inch QHD display",
+            "NVIDIA GeForce RTX 3060",
+            "AMD Ryzen 9",
+            "16GB RAM",
+            "1TB SSD"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    
+    {
+        "product_id": 2,
+        "product_title": "MacBook Pro 16",
+        "product_image": "https://i.ibb.co/fqqDXh8/max-book.webp",
+        "category": "Computers",
+        "price": 2399,
+        "description": "Apple's powerful laptop for professionals and creatives.",
+        "Specification": [
+            "16-inch Retina display",
+            "Apple M1 Pro chip",
+            "16GB RAM",
+            "1TB SSD",
+            "Battery life up to 21 hours"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 3,
+        "product_title": "Dell XPS 13",
+        "product_image": "https://i.ibb.co/0n6LMX5/dell.webp",
+        "category": "Computers",
+        "price": 999,
+        "description": "Compact and lightweight laptop with impressive performance.",
+        "Specification": [
+            "13.3-inch 4K Ultra HD display",
+            "Intel Core i5",
+            "8GB RAM",
+            "256GB SSD",
+            "InfinityEdge display"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 4,
+        "product_title": "HP Envy x360",
+        "product_image": "https://i.ibb.co/VJLnmXS/original-imagwy8dayb2reqg.webp",
+        "category": "Computers",
+        "price": 1299,
+        "description": "2-in-1 convertible laptop for work and play.",
+        "Specification": [
+            "15.6-inch Full HD touchscreen",
+            "AMD Ryzen 5",
+            "16GB RAM",
+            "512GB SSD",
+            "Long battery life"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 5,
+        "product_title": "Acer Aspire 5",
+        "product_image": "https://i.ibb.co/Z2YbVqJ/Acer-Aspire-5.webp",
+        "category": "Computers",
+        "price": 549,
+        "description": "Budget-friendly laptop with essential features.",
+        "Specification": [
+            "15.6-inch Full HD display",
+            "Intel Core i3",
+            "8GB RAM",
+            "256GB SSD",
+            "Fingerprint reader"
+        ],
+        "availability": true,
+        "rating": 4.3
+    },
+    {
+        "product_id": 6,
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "https://i.ibb.co/SRh2vmd/Lenovo-Think-Pad-X1-Carbon.webp",
+        "category": "Computers",
+        "price": 1649,
+        "description": "Lightweight business laptop with robust security features.",
+        "Specification": [
+            "14-inch WQHD display",
+            "Intel Core i7",
+            "16GB RAM",
+            "512GB SSD",
+            "Excellent keyboard"
+        ],
+        "availability": false,
+        "rating": 4.7
+    },
+    {
+        "product_id": 7,
+        "product_title": "Samsung Galaxy S21",
+        "product_image": "https://i.ibb.co/3hDYQC6/Samsung-Galaxy-S21.webp",
+        "category": "Phones",
+        "price": 799,
+        "description": "Flagship smartphone with stunning camera capabilities.",
+        "Specification": [
+            "6.2-inch AMOLED display",
+            "Triple rear camera",
+            "128GB storage",
+            "5G connectivity",
+            "4000mAh battery"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 8,
+        "product_title": "iPhone 13",
+        "product_image": "https://i.ibb.co/MSvCKYb/i-Phone-13.webp",
+        "category": "Phones",
+        "price": 799,
+        "description": "Apple's latest smartphone with advanced features.",
+        "Specification": [
+            "6.1-inch Super Retina XDR display",
+            "Dual 12MP camera system",
+            "128GB storage",
+            "5G capable",
+            "Battery life up to 19 hours"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": 9,
+        "product_title": "Apple Watch Series 7",
+        "product_image": "https://i.ibb.co/y6XkdvC/Apple-Watch-Series-7.webp",
+        "category": "Smart Watches",
+        "price": 399,
+        "description": "Smartwatch with health tracking and fitness features.",
+        "Specification": [
+            "1.9-inch Always-On Retina display",
+            "Heart rate monitor",
+            "GPS",
+            "Water resistant",
+            "Customizable watch faces"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 10,
+        "product_title": "Samsung Galaxy Watch 4",
+        "product_image": "https://i.ibb.co/RH7WtCS/Samsung-Galaxy-Watch-4.webp",
+        "category": "Smart Watches",
+        "price": 250,
+        "description": "Versatile smartwatch with fitness and health tracking.",
+        "Specification": [
+            "1.4-inch AMOLED display",
+            "Body composition analysis",
+            "GPS",
+            "Heart rate monitoring",
+            "Multiple workout modes"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 11,
+        "product_title": "Anker PowerCore 10000",
+        "product_image": "https://i.ibb.co/sKvkxnD/Anker-Power-Core-10000.webp",
+        "category": "Power Banks",
+        "price": 25,
+        "description": "Compact power bank with high capacity for on-the-go charging.",
+        "Specification": [
+            "10000mAh capacity",
+            "Dual USB output",
+            "Fast charging",
+            "Lightweight design"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": 12,
+        "product_title": "RAVPower 20000mAh Power Bank",
+        "product_image": "https://i.ibb.co/BqWCTHf/original-imagw4pwuvtzhcvr.webp",
+        "category": "Power Banks",
+        "price": 40,
+        "description": "High-capacity power bank for charging multiple devices.",
+        "Specification": [
+            "20000mAh capacity",
+            "3 USB output ports",
+            "LED indicator",
+            "Fast charging"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 13,
+        "product_title": "Xiaomi Mi Power Bank 3",
+        "product_image": "https://i.ibb.co/LrNQRMD/10000mah-4i-10000-pb100dpd-in-xiaomi-original-imah2ghrnscqwhen.webp",
+        "category": "Power Banks",
+        "price": 30,
+        "description": "Versatile power bank with dual USB output for fast charging.",
+        "Specification": [
+            "10000mAh capacity",
+            "2 USB output ports",
+            "Quick Charge 3.0",
+            "Aluminum casing"
+        ],
+        "availability": true,
+        "rating": 4.5
+    }
+]

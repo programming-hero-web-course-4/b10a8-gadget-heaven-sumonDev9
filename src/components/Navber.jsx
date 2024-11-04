@@ -8,10 +8,10 @@ const Navber = () => {
         <li><NavLink to='/dashboard' className='font-bold'>Dashboard</NavLink></li>
     </>
 
-    const location = useLocation();
-    console.log(location)
+    const {pathname} = useLocation();
+   
     return (
-        <header className={`mx-4 mt-5 rounded-t-3xl ${location.pathname === '/' ?  'bg-primary text-white' : 'bg-white text-black'}`}>
+        <header className={`mx-3 mt-5 rounded-t-3xl ${pathname.includes('/category/') || pathname === '/' ?  'bg-primary text-white' : 'bg-white text-black'}`}>
             <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -35,7 +35,7 @@ const Navber = () => {
                             {Links}
                         </ul>
                     </div>
-                    <a className="font-bold  text-xl">Gadget Heaven</a>
+                    <a className="font-bold text-base md:text-xl">Gadget Heaven</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-4">

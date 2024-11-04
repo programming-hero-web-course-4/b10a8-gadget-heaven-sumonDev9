@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navber from "../components/Navber";
+import Footer from "../components/Footer";
 
 
 const MainlLayout = () => {
@@ -7,9 +8,14 @@ const MainlLayout = () => {
         <div>
             {/* navbar */}
             <Navber></Navber>
-            {/* dynamic */}
-            <Outlet></Outlet>
+            <div>
+                {/* dynamic */}
+           <div className="min-h-[calc(100vh-500px)]">
+           <Outlet></Outlet>
+           </div>
+            </div>
             {/* footer */}
+            <Footer></Footer>
         </div>
     );
 };

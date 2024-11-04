@@ -12,7 +12,9 @@ export default {
         sora: 'Sora',
       },
       colors: {
-        primary: '#9538E2'
+        primary: '#9538E2',
+        secondary: '#9538E2',
+        textPrimary: '#0B0B0B', 
       },
       backgroundImage: {
         banner: "url('/src/assets/img/banner.jpg')"
