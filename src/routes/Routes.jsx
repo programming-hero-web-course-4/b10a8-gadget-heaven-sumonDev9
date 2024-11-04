@@ -19,6 +19,11 @@ import GadgetsCards from "../components/GadgetsCards";
             loader: () => fetch('../categories.json'),
             children: [
               {
+                path: '/',
+                element: <GadgetsCards></GadgetsCards>,
+                loader: () => fetch('../products.json')
+              },
+              {
                 path: '/category/:category',
                 element: <GadgetsCards></GadgetsCards>,
                 loader: () => fetch('../products.json')

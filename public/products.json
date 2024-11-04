@@ -34,6 +34,7 @@
         "availability": true,
         "rating": 4.8
     },
+
     {
         "product_id": 3,
         "product_title": "Dell XPS 13",
@@ -51,6 +52,7 @@
         "availability": true,
         "rating": 4.6
     },
+
     {
         "product_id": 4,
         "product_title": "HP Envy x360",
@@ -175,7 +177,7 @@
         "product_title": "Anker PowerCore 10000",
         "product_image": "https://i.ibb.co/sKvkxnD/Anker-Power-Core-10000.webp",
         "category": "Power Banks",
-        "price": 25,
+        "price": 150,
         "description": "Compact power bank with high capacity for on-the-go charging.",
         "Specification": [
             "10000mAh capacity",
@@ -191,7 +193,7 @@
         "product_title": "RAVPower 20000mAh Power Bank",
         "product_image": "https://i.ibb.co/BqWCTHf/original-imagw4pwuvtzhcvr.webp",
         "category": "Power Banks",
-        "price": 40,
+        "price": 250,
         "description": "High-capacity power bank for charging multiple devices.",
         "Specification": [
             "20000mAh capacity",
@@ -201,21 +203,6 @@
         ],
         "availability": true,
         "rating": 4.6
-    },
-    {
-        "product_id": 13,
-        "product_title": "Xiaomi Mi Power Bank 3",
-        "product_image": "https://i.ibb.co/LrNQRMD/10000mah-4i-10000-pb100dpd-in-xiaomi-original-imah2ghrnscqwhen.webp",
-        "category": "Power Banks",
-        "price": 30,
-        "description": "Versatile power bank with dual USB output for fast charging.",
-        "Specification": [
-            "10000mAh capacity",
-            "2 USB output ports",
-            "Quick Charge 3.0",
-            "Aluminum casing"
-        ],
-        "availability": true,
-        "rating": 4.5
     }
+
 ]
