@@ -20,4 +20,28 @@ const addToCart = (id) => {
     }
 }
 
-export {getformCart, addToCart}
+// wishList
+const getFromWish = () => {
+    const storeWishStr = localStorage.getItem('wishLish');
+    if(storeWishStr){
+        return JSON.parse(storeWishStr);
+    }
+    else{
+        return []
+    }
+}
+
+const addWishList = (product) => {
+    const storeWishLish =getFromWish();
+    if(storeWishLish.includes(product)){
+        alert('ache')
+    }
+    else{
+        storeWishLish.push(product);
+        const storeWish = JSON.stringify(storeWishLish)
+        localStorage.setItem('wishLish', storeWish)
+    }
+
+}
+export {getformCart, addToCart, getFromWish, addWishList}
+

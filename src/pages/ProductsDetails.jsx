@@ -4,12 +4,14 @@ import ReactStars from "react-rating-stars-component";
 
 import { FaCartArrowDown } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
-import { addToCart } from "../utilities/ProductStroe";
+import { addToCart, addWishList } from "../utilities/ProductStroe";
+// import { useContext } from "react";
+// import { CartContext } from "../contextApi/ContextApi";
 const ProductsDetails = () => {
     const { id } = useParams();
     const productId = parseInt(id);
     const data = useLoaderData();
-    console.log(data)
+    // const { setCart } = useContext(CartContext)
     const product = data.find(product => product.product_id === productId)
 
     const ratingChanged = (newRating) => {
@@ -18,10 +20,15 @@ const ProductsDetails = () => {
     const {product_id, product_title, price, product_image, description, Specification, availability, rating } = product;
 
     const handlecart = (id) => {
-        addToCart(id);
-        
+            // const cartData = addToCart('cart',id);
+            // setCart(cartData);
+
+            addToCart(id)
     }
 
+    const handlewish = (product) => {
+        addWishList(product);
+    }
     return (
         <>
          <ScrollRestoration></ScrollRestoration>
@@ -68,7 +75,7 @@ const ProductsDetails = () => {
                     </div>
                     <div className="flex gap-5">
                         <button onClick={() => handlecart(product_id)} className="flex items-center gap-2 bg-primary text-white px-3 py-2 rounded-full">Add To Card <FaCartArrowDown /></button>
-                        <button className="p-2 rounded-full shadow"> <CiHeart className="text-xl text-textsecondary" /></button>
+                        <button onClick={() => handlewish(product_id)} className="p-2 rounded-full shadow"> <CiHeart className="text-xl text-textsecondary" /></button>
                     </div>
                 </div>
             </div>

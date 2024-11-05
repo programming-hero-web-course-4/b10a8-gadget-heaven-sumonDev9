@@ -58,7 +58,8 @@ import Wishlist from "../components/Wishlist";
               },
               {
                 path: 'whislist',
-                element: <Wishlist></Wishlist>
+                element: <Wishlist></Wishlist>,
+                loader: () => fetch('../products.json')
               }
             ]
           },

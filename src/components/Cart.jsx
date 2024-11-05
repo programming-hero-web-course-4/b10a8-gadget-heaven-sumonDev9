@@ -12,11 +12,11 @@ const Cart = () => {
         const storeCartlist = getformCart();
         const storeCartlistInt = storeCartlist.map(id => parseInt(id));
 
-        console.log(storeCartlist, allcarts, typeof storeCartlistInt)
+     //console.log(storeCartlist, allcarts, typeof storeCartlistInt)
 
         const cartLists = allcarts.filter(product =>storeCartlistInt.includes(product.product_id))
         setCartList(cartLists)    
-    }, []);
+    }, [allcarts]);
     return (
         <div className="">
             <div className="flex flex-col md:flex-row md:justify-between items-center">
