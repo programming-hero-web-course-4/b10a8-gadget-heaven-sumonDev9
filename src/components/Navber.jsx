@@ -1,10 +1,10 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
-import { useContext } from "react";
-import { CartContext } from "../contextApi/ContextApi";
+// import { useContext } from "react";
+// import { CartContext } from "../contextApi/ContextApi";
 
 const Navber = () => {
-  const { cart } = useContext(CartContext);
+//   const { cart } = useContext(CartContext);
     const Links = <>
         <li><NavLink to='/' className='font-bold'>Home</NavLink></li>
         <li><NavLink to='/statistics' className='font-bold'>Statistics</NavLink></li>

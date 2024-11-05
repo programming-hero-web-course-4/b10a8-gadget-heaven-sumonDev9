@@ -40,7 +40,7 @@
         "product_title": "Dell XPS 13",
         "product_image": "https://i.ibb.co/0n6LMX5/dell.webp",
         "category": "Computers",
-        "price": 999,
+        "price": 2999,
         "description": "Compact and lightweight laptop with impressive performance.",
         "Specification": [
             "13.3-inch 4K Ultra HD display",
@@ -109,7 +109,7 @@
         "product_title": "Samsung Galaxy S21",
         "product_image": "https://i.ibb.co/3hDYQC6/Samsung-Galaxy-S21.webp",
         "category": "Phones",
-        "price": 799,
+        "price": 879,
         "description": "Flagship smartphone with stunning camera capabilities.",
         "Specification": [
             "6.2-inch AMOLED display",
@@ -193,7 +193,7 @@
         "product_title": "RAVPower 20000mAh Power Bank",
         "product_image": "https://i.ibb.co/BqWCTHf/original-imagw4pwuvtzhcvr.webp",
         "category": "Power Banks",
-        "price": 250,
+        "price": 290,
         "description": "High-capacity power bank for charging multiple devices.",
         "Specification": [
             "20000mAh capacity",
