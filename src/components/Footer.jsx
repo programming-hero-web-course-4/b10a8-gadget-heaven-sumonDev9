@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-        <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
+        <footer className="footer footer-center bg-white shadow text-base-content rounded p-10">
             <div>
                 <h1 className='text-2xl lg:text-3xl font-bold  text-[#09080F]'>Gadget Heaven</h1>
                 <p className='text-[#09080F99] opacity-60 font-medium'>Leading the way in cutting-edge technology and innovation.</p>

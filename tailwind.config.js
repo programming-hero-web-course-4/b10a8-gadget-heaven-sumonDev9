@@ -14,7 +14,8 @@ export default {
       colors: {
         primary: '#9538E2',
         secondary: '#9538E2',
-        textPrimary: '#0B0B0B', 
+        textPrimary: '#0B0B0B',
+        textsecondary: '#09080F' 
       },
       backgroundImage: {
         banner: "url('/src/assets/img/banner.jpg')"

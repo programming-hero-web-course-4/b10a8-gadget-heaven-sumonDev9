@@ -2,6 +2,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
 
 const Navber = () => {
+  
     const Links = <>
         <li><NavLink to='/' className='font-bold'>Home</NavLink></li>
         <li><NavLink to='/statistics' className='font-bold'>Statistics</NavLink></li>
