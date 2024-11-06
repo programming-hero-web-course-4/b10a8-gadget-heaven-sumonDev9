@@ -21,7 +21,7 @@ const GadgetsCards = () => {
     return (
         <div className="grid col-span-12 md:col-span-9 gap-4">
      {
-      products.length < 1 ? <div className="flex border-2 min-h-96 border-[rgba(9, 8, 15, rounded-lg justify-center items-center gap-2 flex-col">
+      products.length < 1 ? <div className="flex border-2 min-h-96 border-[rgba(9, 8, 15, 0.1)] rounded-lg justify-center items-center gap-2 flex-col">
         <img src={notFound} className="w-32" alt="" />
         <h1 className="text-primary font-bold text-3xl">No Data Found</h1>
 

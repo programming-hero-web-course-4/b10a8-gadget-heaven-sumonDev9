@@ -10,12 +10,15 @@ import GadgetsCards from "../components/GadgetsCards";
 import ProductsDetails from "../pages/ProductsDetails";
 import Cart from "../components/Cart";
 import Wishlist from "../components/Wishlist";
+import Errorpage from "../components/Errorpage";
+
 
 
  const router = createBrowserRouter([
     {
       path: "/",
       element: <MainlLayout></MainlLayout>,
+      errorElement: <Errorpage></Errorpage>,
       children: [
         {
             path: '/',
