@@ -1,18 +1,24 @@
 import { ScrollRestoration, useLoaderData, useParams } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
-
-
 import { FaCartArrowDown } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
-import { addToCart, addWishList } from "../utilities/ProductStroe";
-// import { useContext } from "react";
-// import { CartContext } from "../contextApi/ContextApi";
+import { addToCart, addWishList, getFromWish } from "../utilities/ProductStroe";
+
+import { useEffect, useState } from "react";
+
 const ProductsDetails = () => {
     const { id } = useParams();
     const productId = parseInt(id);
     const data = useLoaderData();
-    // const { setCart } = useContext(CartContext)
+    const [isDisableBtn, setIsisDisableBtn] = useState(false);
     const product = data.find(product => product.product_id === productId)
+  
+    useEffect( () => {
+        const disabledbtn = getFromWish();
+        const isExist = disabledbtn.includes(product);
+        setIsisDisableBtn(isExist)
+    
+    },[product])
 
     const ratingChanged = (newRating) => {
         console.log(newRating);
@@ -22,12 +28,13 @@ const ProductsDetails = () => {
     const handlecart = (id) => {
             // const cartData = addToCart('cart',id);
             // setCart(cartData);
-
-            addToCart(id)
+            addToCart(id);
+            
     }
 
     const handlewish = (product) => {
         addWishList(product);
+        setIsisDisableBtn(true);
     }
     return (
         <>
@@ -74,8 +81,8 @@ const ProductsDetails = () => {
                         <p className="px-3 py-2 bg-[#ECECEC] text-textsecondary opacity-80 rounded-xl">{rating}</p>
                     </div>
                     <div className="flex gap-5">
-                        <button onClick={() => handlecart(product_id)} className="flex items-center gap-2 bg-primary text-white px-3 py-2 rounded-full">Add To Card <FaCartArrowDown /></button>
-                        <button onClick={() => handlewish(product_id)} className="p-2 rounded-full shadow"> <CiHeart className="text-xl text-textsecondary" /></button>
+                        <button  onClick={() => handlecart(product_id)} className="flex items-center gap-2 bg-primary text-white px-3 py-2 rounded-full">Add To Card <FaCartArrowDown /></button>
+                        <button disabled={isDisableBtn}  onClick={() => handlewish(product_id)} className="p-2 rounded-full shadow"> <CiHeart className="text-xl text-textsecondary" /></button>
                     </div>
                 </div>
             </div>
