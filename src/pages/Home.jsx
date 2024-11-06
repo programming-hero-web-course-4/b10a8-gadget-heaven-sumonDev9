@@ -3,10 +3,14 @@ import Banner from "../components/Banner";
 import CategoriesSidebar from "../components/CategoriesSidebar";
 
 import Heading from "../components/Heading";
+import { useEffect } from "react";
 
 
 const Home = () => {
     const categories = useLoaderData();
+    useEffect( () => {
+        document.title ="Gadgets | Gadget Heaven";
+    },[]);
     return (
         <div>
             <ScrollRestoration></ScrollRestoration>

@@ -55,5 +55,13 @@ const addWishList = (product) => {
         toast.success("Item added to wishlist successfully!");
     }
 }
-export {getformCart, addToCart, storeCartRemove, getFromWish, addWishList}
+
+// delete
+const storeWishRemove = (id) => {
+    const storeWishList = getFromWish();
+    const remining = storeWishList.filter(product => product !== id);
+     localStorage.setItem('wishLish', JSON.stringify(remining))
+  
+}
+export {getformCart, addToCart, storeCartRemove, getFromWish, addWishList, storeWishRemove}
 

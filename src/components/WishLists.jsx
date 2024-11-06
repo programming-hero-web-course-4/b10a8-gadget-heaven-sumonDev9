@@ -1,7 +1,7 @@
 import { IoCloseCircleOutline } from "react-icons/io5";
 import PropTypes from 'prop-types';
-const WishLists = ({wishs}) => {
-    const {product_title, product_image, price, description} = wishs;
+const WishLists = ({wishs, handleRemove}) => {
+    const {product_id, product_title, product_image, price, description} = wishs;
     return (
         <div className='flex mb-4 shadow rounded-lg justify-between items-center border-2 border-[rgba(19, 19, 19, 0.1)] p-3'>
         <div className='flex gap-6'>
@@ -15,7 +15,7 @@ const WishLists = ({wishs}) => {
                 <button className="px-3 py-2 bg-primary text-white text-lg font-medium rounded-full">Add to Card</button>
             </div>
         </div>
-        <div  className='text-4xl cursor-pointer text-red-500'><IoCloseCircleOutline /></div>
+        <div onClick={() => handleRemove(product_id)}  className='text-4xl cursor-pointer text-red-500'><IoCloseCircleOutline /></div>
     </div>
     );
 };

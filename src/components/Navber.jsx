@@ -1,5 +1,7 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
+// import { useContext } from "react";
+// import { CartContext } from "../contextApi/ContextApi";
 
 
 
@@ -12,6 +14,7 @@ const Navber = () => {
     </>
 
     const {pathname} = useLocation();
+    // const {cart} = useContext(CartContext);
    
     return (
         <header className={`mx-3 mt-5 rounded-t-3xl ${pathname.includes('/category/') || pathname === '/' ?  'bg-primary text-white' : 'bg-white text-black'}`}>

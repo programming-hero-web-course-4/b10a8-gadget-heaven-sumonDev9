@@ -1,9 +1,12 @@
+import { useEffect } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
 
 const Dashboard = () => {
 
-    
+    useEffect( () => {
+        document.title ="Dashboard | Gadget Heaven";
+    },[]);
     
     
     return (
@@ -18,7 +21,7 @@ const Dashboard = () => {
                  <NavLink to='whislist' className={({isActive}) => `px-10 py-2 rounded-full mr-5 border-2 ${isActive ? 'bg-white text-textsecondary' : 'border-white hover:bg-white hover:text-textsecondary'}`}>Wishlist</NavLink>
                 </div>
             </div>
-            
+
             <div className="mt-10 w-11/12 mx-auto">
                 <Outlet></Outlet>
             </div>

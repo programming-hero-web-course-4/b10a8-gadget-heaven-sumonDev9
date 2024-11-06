@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const MainlLayout = () => {
     return (
         <div>
-            <ToastContainer position="top-center" />
+            <ToastContainer position="top-center" autoClose={1000}/>
             {/* navbar */}
             <Navber></Navber>
             <div>

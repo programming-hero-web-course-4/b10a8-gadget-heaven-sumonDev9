@@ -35,7 +35,7 @@ const Cart = () => {
     const handlePurchase = () =>{
         document.getElementById('my_modal_1').showModal();
         setCartList([]);
-        setTotalcost(0);
+        
         storeCartRemove();
     }
     return (
@@ -48,7 +48,7 @@ const Cart = () => {
                     <h2 className="text-textPrimary text-lg md:text-2xl font-bold">Total cost: {totalcost} </h2>
                     <div className="flex flex-col md:flex-row gap-3">
                         <button onClick={() => handleSort('sortprice')} className="md:btn-md btn-sm  rounded-full border-2 flex gap-2 items-center text-primary text-base md:text-lg font-semibold border-primary hover:bg-primary hover:text-white">Sort by Price <HiAdjustmentsVertical className="" /></button>
-                        <button  onClick={handlePurchase} className="md:btn-md btn-sm rounded-full border-2 border-primary text-primary font-semibold text-base md:text-lg hover:bg-primary hover:text-white">Purchase</button>
+                        <button  onClick={handlePurchase} disabled={cartList.length === 0} className="md:btn-md btn-sm rounded-full border-2 border-primary text-primary font-semibold text-base md:text-lg hover:bg-primary hover:text-white">Purchase</button>
                     </div>
                 </div>
             </div>
