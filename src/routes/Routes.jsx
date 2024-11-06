@@ -11,6 +11,7 @@ import ProductsDetails from "../pages/ProductsDetails";
 import Cart from "../components/Cart";
 import Wishlist from "../components/Wishlist";
 import Errorpage from "../components/Errorpage";
+import AboutUs from "../pages/AboutUs";
 
 
 
@@ -52,20 +53,24 @@ import Errorpage from "../components/Errorpage";
             children: [
               {
                 path: '/dashboard',
-                element: <Navigate to='cart' replace></Navigate>
+                element: <Navigate to='/dashboard/cart' replace></Navigate>
               },
               {
-                path: 'cart',
+                path: '/dashboard/cart',
                 element: <Cart></Cart>,
                 loader: () => fetch('../products.json')
               },
               {
-                path: 'whislist',
+                path: '/dashboard/whislist',
                 element: <Wishlist></Wishlist>,
                 loader: () => fetch('../products.json')
               }
             ]
           },
+          {
+            path: '/about',
+            element: <AboutUs></AboutUs>
+          }
       ]
     },
   ]);

@@ -5,22 +5,22 @@ import { CiHeart } from "react-icons/ci";
 import { addToCart, addWishList, getFromWish } from "../utilities/ProductStroe";
 
 import { useEffect, useState } from "react";
-// import { CartContext } from "../contextApi/ContextApi";
+
 
 const ProductsDetails = () => {
     const { id } = useParams();
     const productId = parseInt(id);
     const data = useLoaderData();
     const [isDisableBtn, setIsisDisableBtn] = useState(false);
-    //  const [cart, setCart] =useContext(CartContext);
+    
     const product = data.find(product => product.product_id === productId)
   
     useEffect( () => {
         const disabledbtn = getFromWish();
-        const isExist = disabledbtn.includes(product);
+        const isExist = disabledbtn.includes(productId);
         setIsisDisableBtn(isExist)
     
-    },[product])
+    },[productId])
     
     const ratingChanged = (newRating) => {
         console.log(newRating);
@@ -28,11 +28,8 @@ const ProductsDetails = () => {
     const {product_id, product_title, price, product_image, description, Specification, availability, rating } = product;
 
     const handlecart = (id) => {
-            // const cartData = addToCart('cart',id);
-            // setCart(cartData);
-          addToCart(id);
-        
-        }
+         addToCart(id);
+     }
 
      
 

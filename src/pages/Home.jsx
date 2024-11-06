@@ -1,4 +1,4 @@
-import { Outlet, ScrollRestoration, useLoaderData } from "react-router-dom";
+import { Outlet, useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner";
 import CategoriesSidebar from "../components/CategoriesSidebar";
 
@@ -13,7 +13,7 @@ const Home = () => {
     },[]);
     return (
         <div>
-            <ScrollRestoration></ScrollRestoration>
+            
             {/* banner */}
             <Banner></Banner>
             {/* Gadgets */}

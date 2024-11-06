@@ -1,7 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
-// import { useContext } from "react";
-// import { CartContext } from "../contextApi/ContextApi";
+
 
 
 
@@ -11,13 +10,14 @@ const Navber = () => {
         <li><NavLink to='/' className='font-bold'>Home</NavLink></li>
         <li><NavLink to='/statistics' className='font-bold'>Statistics</NavLink></li>
         <li><NavLink to='/dashboard' className='font-bold'>Dashboard</NavLink></li>
+        <li><NavLink to='/about' className='font-bold'>About Us</NavLink></li>
     </>
 
     const {pathname} = useLocation();
-    // const {cart} = useContext(CartContext);
+  
    
     return (
-        <header className={`mx-3 mt-5 rounded-t-3xl ${pathname.includes('/category/') || pathname === '/' ?  'bg-primary text-white' : 'bg-white text-black'}`}>
+        <header className={`mx-3 mt-5 rounded-t-3xl ${pathname.includes('/category/') || pathname === '/' ?  'bg-primary text-white' : 'bg-white text-primary'}`}>
             <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -37,11 +37,11 @@ const Navber = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className={`menu menu-sm dropdown-content ${pathname.includes('/category/') || pathname === '/' ? 'bg-primary text-white' : 'bg-white text-primary'} rounded-box z-[1] mt-3 w-52 p-2 shadow`}>
                             {Links}
                         </ul>
                     </div>
-                    <a className="font-bold text-base md:text-xl">Gadget Heaven</a>
+                    <a className={`font-bold  text-base md:text-xl ${pathname.includes('/category/') || pathname === '/' ?  'text-white' : 'bg-white text-primary'}`}>Gadget Heaven</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-4">
