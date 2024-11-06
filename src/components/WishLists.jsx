@@ -24,4 +24,5 @@ WishLists.propTypes = {
     wishs: PropTypes.object.isRequired,
     handleRemove: PropTypes.func.isRequired
 }
+
 export default WishLists;
