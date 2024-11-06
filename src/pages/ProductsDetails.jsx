@@ -5,6 +5,7 @@ import { CiHeart } from "react-icons/ci";
 import { addToCart, addWishList, getFromWish } from "../utilities/ProductStroe";
 
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 
 const ProductsDetails = () => {
@@ -82,7 +83,7 @@ const ProductsDetails = () => {
                         <p className="px-3 py-2 bg-[#ECECEC] text-textsecondary opacity-80 rounded-xl">{rating}</p>
                     </div>
                     <div className="flex gap-5">
-                        <button  onClick={() => handlecart(product_id)} className="flex items-center gap-2 bg-primary text-white px-3 py-2 rounded-full">Add To Card <FaCartArrowDown /></button>
+                        <button  onClick={() => availability ?  handlecart(product_id) : toast.error('product out of service')} className="flex items-center gap-2 bg-primary text-white px-3 py-2 rounded-full">Add To Card <FaCartArrowDown /></button>
                         <button disabled={isDisableBtn}  onClick={() => handlewish(product_id)} className="p-2 rounded-full shadow"> <CiHeart className="text-xl text-textsecondary" /></button>
                     </div>
                 </div>

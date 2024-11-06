@@ -41,7 +41,7 @@ const Navber = () => {
                             {Links}
                         </ul>
                     </div>
-                    <a className={`font-bold  text-base md:text-xl ${pathname.includes('/category/') || pathname === '/' ?  'text-white' : 'bg-white text-primary'}`}>Gadget Heaven</a>
+                    <a className={`font-bold  text-base md:text-xl ${pathname.includes('/category/') || pathname === '/' ?  'text-white' : 'bg-white text-black'}`}>Gadget Heaven</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-4">
