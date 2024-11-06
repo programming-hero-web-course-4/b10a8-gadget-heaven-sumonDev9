@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
-
+import '../css/Nav.css';
 
 
 

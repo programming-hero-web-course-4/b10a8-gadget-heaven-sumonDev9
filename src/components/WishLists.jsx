@@ -21,6 +21,7 @@ const WishLists = ({wishs, handleRemove}) => {
 };
 
 WishLists.propTypes = {
-    wishs: PropTypes.object.isRequired
+    wishs: PropTypes.object.isRequired,
+    handleRemove: PropTypes.func.isRequired
 }
 export default WishLists;

@@ -23,6 +23,10 @@ const ProductsDetails = () => {
     
     },[productId])
     
+    useEffect( () => {
+        document.title ="Product Details | Gadget Heaven";
+    },[]);
+    
     const ratingChanged = (newRating) => {
         console.log(newRating);
     };
@@ -84,7 +88,7 @@ const ProductsDetails = () => {
                     </div>
                     <div className="flex gap-5">
                         <button  onClick={() => availability ?  handlecart(product_id) : toast.error('product out of service')} className="flex items-center gap-2 bg-primary text-white px-3 py-2 rounded-full">Add To Card <FaCartArrowDown /></button>
-                        <button disabled={isDisableBtn}  onClick={() => handlewish(product_id)} className="p-2 rounded-full shadow"> <CiHeart className="text-xl text-textsecondary" /></button>
+                        <button disabled={isDisableBtn}  onClick={() => handlewish(product_id)} className={`p-2 rounded-full shadow ${isDisableBtn ? 'bg-gray-400 text-gray-200' : 'bg-white text-textsecondary'}`}> <CiHeart className="text-xl text-textsecondary" /></button>
                     </div>
                 </div>
             </div>

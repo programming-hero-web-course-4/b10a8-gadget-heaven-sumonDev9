@@ -4,7 +4,7 @@
         "product_title": "Asus ROG Zephyrus G14",
         "product_image": "https://i.ibb.co/NKBMWzD/rog-zephyrus.webp",
         "category": "Computers",
-        "price": 1899,
+        "price": 1820,
         "description": "Compact and powerful gaming laptop with incredible performance.",
         "Specification": [
             "14-inch QHD display",
@@ -75,7 +75,7 @@
         "product_title": "Acer Aspire 5",
         "product_image": "https://i.ibb.co/Z2YbVqJ/Acer-Aspire-5.webp",
         "category": "Computers",
-        "price": 549,
+        "price": 1549,
         "description": "Budget-friendly laptop with essential features.",
         "Specification": [
             "15.6-inch Full HD display",
@@ -126,7 +126,7 @@
         "product_title": "iPhone 13",
         "product_image": "https://i.ibb.co/MSvCKYb/i-Phone-13.webp",
         "category": "Phones",
-        "price": 799,
+        "price": 1999,
         "description": "Apple's latest smartphone with advanced features.",
         "Specification": [
             "6.1-inch Super Retina XDR display",
@@ -143,7 +143,7 @@
         "product_title": "Apple Watch Series 7",
         "product_image": "https://i.ibb.co/y6XkdvC/Apple-Watch-Series-7.webp",
         "category": "Smart Watches",
-        "price": 399,
+        "price": 599,
         "description": "Smartwatch with health tracking and fitness features.",
         "Specification": [
             "1.9-inch Always-On Retina display",
@@ -160,7 +160,7 @@
         "product_title": "Samsung Galaxy Watch 4",
         "product_image": "https://i.ibb.co/RH7WtCS/Samsung-Galaxy-Watch-4.webp",
         "category": "Smart Watches",
-        "price": 250,
+        "price": 389,
         "description": "Versatile smartwatch with fitness and health tracking.",
         "Specification": [
             "1.4-inch AMOLED display",

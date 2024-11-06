@@ -1,6 +1,6 @@
 import { IoCloseCircleOutline } from "react-icons/io5";
 import PropTypes from 'prop-types';
-const CartList = ({carts}) => {
+const CartList = ({carts, handleCartRemove}) => {
     const {product_id, product_title, product_image, price, description} = carts;
     return (
         <div className='flex mb-4 shadow rounded-lg justify-between items-center border-2 border-[rgba(19, 19, 19, 0.1)] p-3'>
@@ -12,13 +12,14 @@ const CartList = ({carts}) => {
                 <p className='text-textPrimary  font-semibold opacity-80'>${price}</p>
             </div>
         </div>
-        <div  className='text-4xl cursor-pointer text-red-500'><IoCloseCircleOutline /></div>
+        <div onClick={() => handleCartRemove(product_id)} className='text-4xl cursor-pointer text-red-500'><IoCloseCircleOutline /></div>
     </div>
     );
 };
 
 CartList.propTypes ={
-    carts: PropTypes.object
+    carts: PropTypes.object.isRequired,
+    handleCartRemove: PropTypes.func
 }
 
 export default CartList;

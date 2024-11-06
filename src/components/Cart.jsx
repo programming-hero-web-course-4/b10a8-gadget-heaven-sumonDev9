@@ -4,10 +4,11 @@ import { getformCart, storeCartRemove } from "../utilities/ProductStroe";
 import { HiAdjustmentsVertical } from "react-icons/hi2";
 import CartList from "./CartList";
 import paymentImg from '../../src/assets/img/Group.png'
+import { toast } from "react-toastify";
 const Cart = () => {
     const allcarts = useLoaderData();
     const [cartList, setCartList] = useState([]);
-    const [sort, setSort] = useState(allcarts);
+    
     const [totalcost, setTotalcost] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
@@ -15,7 +16,7 @@ const Cart = () => {
         const storeCartlistInt = storeCartlist.map(id => parseInt(id));
         const cartLists = allcarts.filter(product => storeCartlistInt.includes(product.product_id))
         setCartList(cartLists)
-        setSort(cartLists)
+      
 
         // total cost
         const total = cartLists.reduce((sum, product) => sum + product.price, 0)
@@ -23,21 +24,31 @@ const Cart = () => {
 
     }, [allcarts]);
 
-    // sort 
-    const handleSort = (sortBy) => {
-        if (sortBy === 'sortprice') {
-            const sortList = [...sort].sort((a, b) => b.price - a.price);
-            setCartList(sortList)
-        }
+    const handleSort = () => {
+        const sortedList = [...cartList].sort((a, b) => b.price - a.price);
+        setCartList(sortedList);
     }
 
-
+    // purchase
     const handlePurchase = () =>{
         document.getElementById('my_modal_1').showModal();
         setCartList([]);
-        
         storeCartRemove();
     }
+
+    // cart remove
+    const handleCartRemove = id => {
+        
+        storeCartRemove(id);
+        const removeCartList = cartList.filter(item => item.product_id !== id);
+        setCartList(removeCartList)
+        const updatedTotalcost = removeCartList.reduce((sum, product) => sum + product.price, 0)
+        setTotalcost(updatedTotalcost);
+        toast.success('Cart remove successfully')
+    }
+
+
+    
     return (
         <>
        
@@ -47,15 +58,16 @@ const Cart = () => {
                 <div className="flex items-center justify-between gap-3">
                     <h2 className="text-textPrimary text-lg md:text-2xl font-bold">Total cost: {totalcost} </h2>
                     <div className="flex flex-col md:flex-row gap-3">
-                        <button onClick={() => handleSort('sortprice')} className="md:btn-md btn-sm  rounded-full border-2 flex gap-2 items-center text-primary text-base md:text-lg font-semibold border-primary hover:bg-primary hover:text-white">Sort by Price <HiAdjustmentsVertical className="" /></button>
-                        <button  onClick={handlePurchase} disabled={cartList.length === 0} className="md:btn-md btn-sm rounded-full border-2 border-primary text-primary font-semibold text-base md:text-lg hover:bg-primary hover:text-white">Purchase</button>
+                        <button onClick={handleSort} className="md:btn-md btn-sm  rounded-full border-2 flex gap-2 items-center text-primary text-base md:text-lg font-semibold border-primary hover:bg-primary hover:text-white">Sort by Price <HiAdjustmentsVertical className="" /></button>
+                        <button  onClick={handlePurchase} disabled={cartList.length === 0} className={`md:btn-md btn-sm rounded-full border-2 ${cartList.length === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'border-primary text-primary hover:bg-primary hover:text-white'}`}>Purchase</button>
                     </div>
                 </div>
             </div>
 
             <div className="mt-10">
                 {
-                    cartList.map(carts => <CartList key={carts.product_id} carts={carts}></CartList>)
+                    cartList.map(carts => <CartList key={carts.product_id}
+                        handleCartRemove={handleCartRemove} carts={carts}></CartList>)
                 }
             </div>
 
